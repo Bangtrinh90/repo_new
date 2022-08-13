@@ -1,0 +1,168 @@
+/* dấu "*": chọn tát cá các thẻ html (bao gồm cả body) */
+/* Global: dùng cho toàn bộ website */
+* {
+    /* để reset lại margin + padding của trình duyệt */
+    margin: 0;
+    padding: 0;
+    /* box-sizing: giữ nguyên kích tước của thẻ htm khi thêm thẻ padding vào; */
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: #faf4f2;
+}
+
+.clear {
+    clear: both;
+}
+
+/* HEADER */
+/* ul lấy toàn bộ thẻ ul ra để CSS, sẽ ảnh hưởng toàn trang web */
+.header {
+    /* tên màu: có 3 loại
+    1. tên tiếng anh (white, black)
+    2. hex (#)
+    3. rgb (0,0,0) */
+
+    background-color: #f8e1db;
+    /* thêm khoảng cách left/ right cho khung header cho giống layout */
+    padding: 10px 35px;
+}
+
+.header ul {
+    /* Bước 1: xóa dấu tròn đen */
+    list-style: none;
+}
+
+.header a {
+    /* Bước 2: xóa đường gạch chân */
+    text-decoration: none;
+    color: black;
+}
+
+.header li {
+    /* Bước 3: chuyển li từ block sang inline, các li sẽ chugn 1 hàng */
+    display: inline;
+    /* box-model: cách thể hiện của trình duyệt với thẻ html, giúp phân biệt dc các vùng (margin, padding, content, border) trong phạm vi của thẻ */
+    /* margin: khu vực khoảng cách từ thẻ html này >> khác (bên ngoài) */
+    margin: 10px;
+    /* padding: khu vực khoảng cách từ nội dung content >> khung border (bên trong) */
+    /* border: 3px solid red; */
+}
+
+/* CAROUSEL */
+.carousel {
+    background-image: url(../Image/BG.png);
+    /* bắt buộc phải set chiều cao height thì mới show dc tấm hình ra */
+    height: 500px;
+    /* chỉnh kích thước hình nền: cover là phủ hết tấm hình vô thẻ carousel */
+    background-size: cover;
+    /* set tấm hình vô vị trí trung tâm */
+    background-position: center;
+    /* căng phủ đều tấm hình lên cover, tránh lặp lại hình */
+    background-repeat: no-repeat;
+}
+
+/* ACTIVITES */
+/* /* display: inline chỉ áp dụng cho ndung đơn giản (chứa 1 con/ hoặc 1 dòng chữ ngắn) */
+
+/* float: sx các khối ndung hỗ trợ cho mọi phiên bản trình duyệt, nhưng khó sdung */
+
+.activities_item {
+    float: left;
+    /* kích thước tối đa của trình duyệt là 100% */
+    width: 25%;
+    /* width: 100%, nếu bị tràn trên trình duyệt làm rớt hàng, kich thước của 1 thẻ item (width)= content + padding + border 
+    => (content 25% + 20px) x 4 sẽ lớn hơn 100% => bị rớt hàng */
+    padding: 0 10px;
+    /* margin: 0 10px; */
+    /* border: 1px solid red; */
+    /* nếu thẻ con chưa có thuộc tính CSS, thì khi xét cho cha, thẻ con sẽ được kế thừa (text-align, color, font-size) */
+    text-align: center;
+}
+
+.activities_background {
+    background-color: white;
+    /* border: 3px solid green; */
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.activities_image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.activities_info p {
+    margin: 15px 0;
+}
+
+/* icon image
++ chỉnh sửa khó
++ chỉnh size khó
++ dung lượng nặng web >> performance kém
+font chữ >> hiển thị icon
+=>> sinh ra font icon (client cung cấp tên font) */
+
+/* cài đặt thư viện
+- C1: tải code về và gắn đường dẫn vào file html
+- C2: sử dụng url bằng cdn  */
+.activities_image {
+    /* position: relative cho thẻ cha (cha gần con nhất) */
+    position: relative;
+}
+
+.activities_icon {
+    /* position: absolute cho thẻ con; */
+    position: absolute;
+    /* top, left, right, bottom */
+    top: 20px;
+    right: 20px;
+    /* trong suốt thẻ (bao gồm toàn bộ nội dung thẻ nằm bên trong nó) */
+    /* giá trị từ 0>>1 */
+    /* opacity: 0.5; >> không sdung vì nó làm giảm toàn bộ màu cả khung icon */
+
+    /* rgba mã màu có độ trong suốt */
+
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 40px;
+
+    /* thẻ a là loại inline, ko xét dc kích thước >> chuyển thẻ a từ inline >> block-size: ; */
+    display: block;
+    /* text-align: center giúp canh giữa icon trong khung border */
+    text-align: center;
+    /* line-height giúp canh icon theo chiều dọc
+    line-height kết hợp với height: chỉ áp dụng cho 1 dòng chữ/ 1 ký tự chữ thì sẽ canh theo chiều dọc */
+    height: 40px;
+    line-height: 40px;
+}
+
+.activities_icon i {
+    /* thẻ i do có thư viện tác động font awesome, thư viện đã xét display block thẻ i */
+    color: #e76f51;
+    font-size: 20px;
+}
+
+.activities_viewALL {
+    text-align: center;
+}
+
+.activities_viewALL button {
+    padding: 15px 50px;
+    border: 1px solid #e76f51;
+    /* transparent: màu nền trong suốt */
+    background-color: transparent;
+    border-radius: 50px;
+    margin: 15px 0;
+    color: #e76f51;
+    /* hiện dấu bàn tay khi người dùng trỏ chuột vào  */
+    cursor: pointer;
+}
+
+/* hover: di chuyển chuột vào button và thẻ button sẽ thay đổi màu sắc, font chữ/ kích thước */
+.activities_viewALL button:hover {
+    background-color: #e76f51;
+    color: white;
+}

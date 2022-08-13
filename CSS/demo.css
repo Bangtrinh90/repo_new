@@ -1,0 +1,36 @@
+/* tag name 1d */
+h2 {
+    color: red;
+    background-color: red;
+}
+
+/* id 100d */
+#idheading2 {
+    font-size: 50px;
+    background-color: yellow;
+}
+
+/* class name 10d */
+.heading2 {
+    background-color: green;
+}
+
+/* 1 + 100 + 10 = 111 */
+body #idheading2.heading2 {
+    background-color: blue;
+}
+
+/* Cách 1: bằng điểm,
+code nằm dưới cùng
+ Cách 2: đặt điểm cao hơn,
+ko quan trọng thứ tự */
+
+/* 100 + 10 = 110 */
+/* Selector:#idheading2.heading2  */
+#idheading2.heading2 {
+    background-color: pink;
+}
+
+h1 {
+    background-color: green;
+}

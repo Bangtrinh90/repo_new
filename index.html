@@ -1,0 +1,142 @@
+<!-- gõ phím tắt "shift + !" để show ra phần head của code -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camping</title>
+
+    <!-- Cài font-awesome (phải để trong header, bên trên CSS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />">
+
+    <!-- <link rel="stylesheet" href="./CSS/demo.css"> -->
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <!-- B1: phân tích bố cục thành phần web
+    web gồm 5 thành phần chính:
+    thẻ div: phân chia bố cục các thành phần UI -->
+    <div id="header" class="header">
+        <a href="#">
+            <img src="./Image/logoicon.png" alt="Logo">
+        </a>
+        <!-- navigation bar/menu (thanh điều hướng) -->
+        <ul>
+            <!-- Nhấn nút alt + click chuột >> nhấn "#" )(chèn dấu #vào các dòng đó) -->
+            <!-- ul > li*6>a: dùng tạo nhanh 6 thẻ cấu trúc html ul-li -->
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    <!-- .carousel: gõ tạo thẻ <div class="carousel"> -->
+    <!-- p.abc >> tạo thẻ p có class "abc" -->
+    <!-- <p class="carousel"></p> -->
+
+    <div class="carousel">
+    </div>
+
+    <!-- class="title": nếu code css áp dụng chung, thì đặt tên class gọn để tiện dùng chung
+
+    BEM: thể hiện cha con giữa các thẻ: tenthechachinh_tenrieng 
+
+    btn-light: trong đó btn = button-->
+    <div class="activities">
+        <div class="activities_title">
+            <img class="activities_image" src="./Image/Group 313.png" alt="">
+            <h2>Explore Destination & Activites</h2>
+        </div>
+        <div class="activities_content">
+            <!-- activites_item: thêm khoảng cách -->
+            <div class="activities_item">
+                <!-- activities_background: thêm màu nền -->
+                <div class="activities_background">
+                    <div class="activities_image">
+                        <img src="./Image/product1.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities_info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites. </p>
+                        <button>read more</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="activities_item">
+                <!-- activities_background: thêm màu nền -->
+                <div class="activities_background">
+                    <div class="activities_image">
+                        <img src="./Image/product4.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities_info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites. </p>
+                        <button>read more</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="activities_item">
+                <!-- activities_background: thêm màu nền -->
+                <div class="activities_background">
+                    <div class="activities_image">
+                        <img src="./Image/product5.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities_info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites. </p>
+                        <button>read more</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="activities_item">
+                <!-- activities_background: thêm màu nền -->
+                <div class="activities_background">
+                    <div class="activities_image">
+                        <img src="./Image/product1.png" alt="">
+                        <a href="#" class="activities_icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="activities_info">
+                        <h3>Trickle Creek Ranch</h3>
+                        <p>Book unique camping experiences on over 300,000 campsites. </p>
+                        <button>read more</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- clear float (xóa ảnh hưởng của float) -->
+        <div class="clear"></div>
+        <div class="activities_viewALL">
+            <button>view all
+
+            </button>
+        </div>
+    </div>
+    <div class="contact"></div>
+    <div class="footer"></div>
+
+</body>
+
+</html>
